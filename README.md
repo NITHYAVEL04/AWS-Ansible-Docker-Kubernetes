@@ -21,26 +21,29 @@ An automated, containerized cloud infrastructure project built entirely on a rem
    Instead of manually configuring the server, we ran an Ansible playbook (`setup-k8s.yml`) that automatically installs Docker, `kubectl`, and Minikube.
    
    <img width="1202" height="667" alt="Ansible playbook status" src="https://github.com/user-attachments/assets/afce3195-8276-4f55-ab32-cded3aa6b303" />
-                                                      **Ansible Automated Provisioning**
+                                                      Ansible Automated Provisioning
+   
 
 3. **Cluster Initialization & Containerization:** 
    We booted Minikube on the cloud instance and built a custom Nginx web app image using Docker within Minikube's local environment.
 
   <img width="972" height="167" alt="Docker Image" src="https://github.com/user-attachments/assets/ef1ac31b-47a3-4fd8-bec4-da8049881df6" />
-                                                   **Minikube Cluster & Docker Image Build**
+                                                     Minikube Cluster & Docker Image Build
+                                                     
 
 4. **Kubernetes Deployment & Exposure:** 
    We deployed the container using a declarative YAML manifest (`deployment.yaml`) and exposed it via a NodePort service.
 
    <img width="632" height="82" alt="Pod status" src="https://github.com/user-attachments/assets/8d83450b-8b15-41d5-97f5-a1364779d75b" />
    <img width="777" height="132" alt="Service status" src="https://github.com/user-attachments/assets/e54c992a-1583-4055-a42c-b7307dfb204f" />
-                                                     **Kubernetes Pods & Service Deployment**
+                                                      Kubernetes Pods & Service Deployment
+   
 
-5. **Live Access & Verification:** 
+6. **Live Access & Verification:** 
    We forwarded traffic using `kubectl port-forward` to access the application live through the browser.
 
    <img width="872" height="202" alt="Browser output" src="https://github.com/user-attachments/assets/91bd814a-0c10-4f9c-8f4b-e171c3ad8a26" />
-                                                      **Live Web Application Running on Kubernetes**
+                                                       Live Web Application Running on Kubernetes
 
 ---
 
